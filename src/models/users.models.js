@@ -18,13 +18,6 @@ const userSchema = new Schema({
         lowercase : true,
         trim : true,
     },
-    email :{
-        type:String,
-        required : true,
-        unique : true,
-        lowercase : true,
-        trim : true,
-    },
     fullname :{
         type:String,
         required : true,
@@ -35,7 +28,7 @@ const userSchema = new Schema({
         type:String, //cloudinary url use krenge like aws but it's free
         required : true,
     },
-    avatar :{
+    coverImage :{
         type:String,
     },
     watchHistory:[{
@@ -46,7 +39,7 @@ const userSchema = new Schema({
     ],
     password : {
         type : String,
-        reuqired : [true , "Password is required"]
+        required : [true , "Password is required"]
     },
     refreshToken : {
         type:String
